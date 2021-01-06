@@ -1,6 +1,5 @@
 package firstProject.base;
 
-
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
         strict = true,
         features = {"src/test/resources/features/firstProject"},
         glue = {"firstProject.stepdefinitions"}
-        )
+)
 public class CucumberRunner {
 
     private static final TestNGCucumberRunner testNGCucumberRunner = new TestNGCucumberRunner(CucumberRunner.class);
