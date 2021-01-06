@@ -1,4 +1,4 @@
-Feature: First file
+Feature: belly feature
 
   Scenario: a few cookies
     Given I have 42 cookies in my belly
