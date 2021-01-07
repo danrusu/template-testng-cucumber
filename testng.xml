@@ -3,7 +3,7 @@
 <suite name="Suite">
     <test name="First test">
         <classes>
-            <class name="firstProject.base.CucumberRunner"/>
+            <class name="simpleCalculator.base.CucumberRunner"/>
         </classes>
     </test>
 </suite>
