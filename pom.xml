@@ -125,6 +125,12 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>dataproviderthreadcount</name>
+                            <value>8</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>
