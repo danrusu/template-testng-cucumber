@@ -3,6 +3,7 @@ package simpleCalculator.stepdefinitions;
 import common.ui.webdriver.WebDriverStrategy;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -33,12 +34,12 @@ public class SimpleCalculator {
         webDriver.findElement(By.id("nr1")).sendKeys(number1);
     }
 
-    @When("User types {string} in Number2 input")
+    @And("User types {string} in Number2 input")
     public void user_types_in_Number2_input(final String number2) {
         webDriver.findElement(By.id("nr2")).sendKeys(number2);
     }
 
-    @When("User selects {string} operation from dropdown")
+    @And("User selects {string} operation from dropdown")
     public void user_selects(final String operation) {
         webDriver.findElement(By.cssSelector("select")).click();
         webDriver.findElement(By.xpath(
@@ -46,7 +47,7 @@ public class SimpleCalculator {
         ).click();
     }
 
-    @When("User presses the CALCULATE button")
+    @And("User presses the CALCULATE button")
     public void user_presses_the_CALCULATE_button() {
         webDriver.findElement(By.cssSelector("button[name=\"calculate\"]")).click();
     }
