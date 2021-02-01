@@ -10,8 +10,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         strict = true,
         features = {"src/test/resources/features/simpleCalculator"},
-        glue = {"simpleCalculator.stepdefinitions"},
-        plugin = {"pretty", "html:target/cucumber"}
+        glue = {"simpleCalculator.stepdefinitions"}
 )
 public class CucumberRunner {
 

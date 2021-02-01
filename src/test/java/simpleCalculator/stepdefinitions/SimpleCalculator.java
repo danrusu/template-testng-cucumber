@@ -54,7 +54,7 @@ public class SimpleCalculator {
 
     @Then("Result should display {string}")
     public void result_should_display(final String expectedResult) {
-        new WebDriverWait(webDriver, 3)
+        new WebDriverWait(webDriver, 5)
                 .until(textToBe(
                         By.cssSelector("[data-qa-test=\"result\"]"),
                         expectedResult));
