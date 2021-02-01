@@ -8,9 +8,10 @@ Feature: SimpleCalculator
     And User presses the CALCULATE button
     Then Result should display "<expectedResult>"
     Examples:
-      | number1 | number2 | operation      | expectedResult            |
-      | 100     | 100     | MULTIPLICATION | 10000                     |
-      | -100    | -100    | MULTIPLICATION | 10000                     |
-      |         |         | MULTIPLICATION | One number input is empty |
-      | 100     |         | MULTIPLICATION | One number input is empty |
-      |         | 100     | MULTIPLICATION | One number input is empty |
+      | number1 | number2 | operation | expectedResult            |
+      | 100     | 100     | DIVISION  | 1                         |
+      | -100    | 100     | DIVISION  | -1                        |
+      |         |         | DIVISION  | One number input is empty |
+      | 100     |         | DIVISION  | One number input is empty |
+      |         | 100     | DIVISION  | One number input is empty |
+      | 5       | 0       | DIVISION  | Cannot divide by 0        |
