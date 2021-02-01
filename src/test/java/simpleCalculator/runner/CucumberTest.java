@@ -1,4 +1,4 @@
-package simpleCalculator.base;
+package simpleCalculator.runner;
 
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
         features = {"src/test/resources/features/simpleCalculator"},
         glue = {"simpleCalculator.stepdefinitions"}
 )
-public class CucumberRunner {
+public class CucumberTest {
 
-    private static final TestNGCucumberRunner testNGCucumberRunner = new TestNGCucumberRunner(CucumberRunner.class);
+    private static final TestNGCucumberRunner testNGCucumberRunner = new TestNGCucumberRunner(CucumberTest.class);
 
     @Test(dataProvider = "getScenarios")
     public void runScenario(final PickleWrapper pickleWrapper, final FeatureWrapper featureWrapper) throws Throwable {
