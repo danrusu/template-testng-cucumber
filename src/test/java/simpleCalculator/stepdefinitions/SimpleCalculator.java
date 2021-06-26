@@ -9,6 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Optional;
@@ -31,7 +32,8 @@ public class SimpleCalculator {
 
     @When("User types {string} in Number1 input")
     public void user_types_in_Number1_input(final String number1) {
-        webDriver.findElement(By.id("nr1")).sendKeys(number1);
+        final WebElement nr1 = webDriver.findElement(By.id("nr1"));
+        nr1.sendKeys(number1);
     }
 
     @And("User types {string} in Number2 input")
