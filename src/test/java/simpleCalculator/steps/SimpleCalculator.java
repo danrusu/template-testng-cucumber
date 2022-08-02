@@ -22,6 +22,7 @@ public class SimpleCalculator {
 
     @Before
     public void setupDriver() {
+        System.out.println("@@@ Before" + this.getClass().getSimpleName());
         webDriver = WebDriverStrategy.valueOf("CHROME").getDriver();
     }
 
@@ -64,7 +65,8 @@ public class SimpleCalculator {
 
     @After
     public void quitDriver() {
-        Optional.ofNullable(webDriver).ifPresent(driver -> driver.quit());
+        System.out.println("@@@ After" + this.getClass().getSimpleName());
+        Optional.ofNullable(webDriver).ifPresent(WebDriver::quit);
     }
 
 }
